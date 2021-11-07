@@ -1,0 +1,62 @@
+[tool.black]
+line-length = 88
+include = "\\.pyi?$"
+exclude = """
+(
+  /(
+      \\.eggs         # exclude a few common directories in the
+    | \\.git          # root of the project
+    | \\.hg
+    | \\.mypy_cache
+    | \\.tox
+    | \\.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+"""
+
+[tool.isort]
+# black compatibility
+profile = "black"
+# cuctom section
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+known_third_party = []
+known_local_folder = []
+
+[tool.pylint.messages_control]
+# black compatibility
+disable = "C0330, C0326"
+
+[tool.pylint.format]
+# black compatibility
+max-line-length = "88"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.poetry]
+name = "python-project-template"
+version = "0.1.0"
+description = ""
+authors = ["afunTW <afun@afun.tw>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+mypy = "^0.910"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.15.0"
+black = "^21.10b0"
+isort = "^5.10.0"
+pylint = "^2.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
