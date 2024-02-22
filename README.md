@@ -2,9 +2,7 @@
 
 My default development setting for any python project
 
-- [python-poetry/poetry: Python dependency management and packaging made easy.](https://github.com/python-poetry/poetry)
-- [psf/black: The uncompromising Python code formatter](https://github.com/psf/black)
-- [PyCQA/isort: A Python utility / library to sort imports.](https://github.com/PyCQA/isort)
+- [astral-sh/ruff: An extremely fast Python linter and code formatter, written in Rust.](https://github.com/astral-sh/ruff)
 - [pre-commit/pre-commit: A framework for managing and maintaining multi-language pre-commit hooks.](https://github.com/pre-commit/pre-commit)
 - [python/mypy: Optional static typing for Python](https://github.com/python/mypy)
 - [PyCQA/bandit: Bandit is a tool designed to find common security issues in Python code.](https://github.com/PyCQA/bandit)
